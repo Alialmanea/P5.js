@@ -25,7 +25,7 @@ function draw() {
   z = z + dz;
 
   points.push(new p5.Vector(x, y, z));
-
+  
   translate(0, 0, -80);
   let camX = map(mouseX, 0, width, -200, 200);
   let camY = map(mouseY, 0, height, -200, 200);
@@ -41,10 +41,6 @@ function draw() {
   for (let v of points) {
     stroke(hu, 255, 255);
     vertex(v.x, v.y, v.z);
-    //var offset = p5.Vector.random3D();
-    //offset.mult(0.1);
-    //v.add(offset);
-
     hu += 1;
     if (hu > 255) {
       hu = 0;
