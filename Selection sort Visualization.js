@@ -5,7 +5,7 @@ let n;
 
 function setup() {
   values = new Array(width);
-  createCanvas(400, 400);
+  createCanvas(windowWidth,windowHeight);
   for(let i = 0; i < width;i++){
     values[i] = floor(random(height));
   }
